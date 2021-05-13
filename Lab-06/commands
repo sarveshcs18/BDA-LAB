@@ -1,0 +1,200 @@
+sarvesh@sarvesh-VirtualBox:~$ start-all.sh
+WARNING: Attempting to start all Apache Hadoop daemons as sarvesh in 10 seconds.
+WARNING: This is not a recommended production deployment configuration.
+WARNING: Use CTRL-C to abort.
+Starting namenodes on [localhost]
+Starting datanodes
+Starting secondary namenodes [sarvesh-VirtualBox]
+Starting resourcemanager
+Starting nodemanagers
+sarvesh@sarvesh-VirtualBox:~$ hdfs dfs -mkdir /lab5
+mkdir: Call From sarvesh-VirtualBox/127.0.1.1 to localhost:9000 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+sarvesh@sarvesh-VirtualBox:~$ Downloads/hadoop-3.2.2/bin/hdfs namenode -format
+2021-05-13 11:55:35,070 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = sarvesh-VirtualBox/127.0.1.1
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 3.2.2
+STARTUP_MSG:   classpath = /home/sarvesh/Downloads/hadoop-3.2.2//etc/hadoop:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jaxb-api-2.2.11.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jersey-json-1.19.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerb-client-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/javax.activation-api-1.2.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/commons-text-1.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/snappy-java-1.0.5.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jackson-core-2.9.10.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/guava-27.0-jre.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jersey-core-1.19.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jetty-servlet-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jetty-io-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/commons-configuration2-2.1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerby-util-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/curator-client-2.13.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/stax2-api-3.1.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/woodstox-core-5.0.3.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/commons-io-2.5.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerb-util-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerb-identity-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jsp-api-2.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/commons-logging-1.1.3.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/asm-5.0.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/httpclient-4.5.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/hadoop-auth-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jackson-databind-2.9.10.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/avro-1.7.7.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/commons-cli-1.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/dnsjava-2.1.7.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jetty-security-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/commons-codec-1.11.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/log4j-1.2.17.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jackson-annotations-2.9.10.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jetty-util-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/nimbus-jose-jwt-7.9.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/commons-beanutils-1.9.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/commons-net-3.6.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/audience-annotations-0.5.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jetty-http-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/checker-qual-2.5.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/paranamer-2.3.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/curator-framework-2.13.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/netty-3.10.6.Final.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/commons-lang3-3.7.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/hadoop-annotations-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/htrace-core4-4.1.0-incubating.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerb-admin-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jackson-xc-1.9.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jsch-0.1.55.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/json-smart-2.3.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerb-server-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jul-to-slf4j-1.7.25.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/accessors-smart-1.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jersey-servlet-1.19.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jetty-xml-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jsr305-3.0.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerb-common-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/commons-compress-1.19.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/curator-recipes-2.13.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerby-asn1-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/token-provider-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jettison-1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/error_prone_annotations-2.2.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jetty-webapp-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerby-pkix-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/metrics-core-3.2.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/gson-2.2.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerby-config-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/commons-math3-3.1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/httpcore-4.4.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/j2objc-annotations-1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jersey-server-1.19.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jsr311-api-1.1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/failureaccess-1.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/zookeeper-3.4.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerb-core-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jetty-server-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/protobuf-java-2.5.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/slf4j-api-1.7.25.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/re2j-1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/jcip-annotations-1.0-1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/kerby-xdr-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/commons-collections-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/lib/animal-sniffer-annotations-1.17.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/hadoop-common-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/hadoop-kms-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/hadoop-common-3.2.2-tests.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/common/hadoop-nfs-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jaxb-api-2.2.11.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jersey-json-1.19.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/javax.activation-api-1.2.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-text-1.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/snappy-java-1.0.5.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jackson-core-2.9.10.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/guava-27.0-jre.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jersey-core-1.19.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jetty-servlet-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jetty-io-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-configuration2-2.1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/curator-client-2.13.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/okhttp-2.7.5.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/stax2-api-3.1.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/woodstox-core-5.0.3.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-io-2.5.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerb-util-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/asm-5.0.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/httpclient-4.5.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/hadoop-auth-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jackson-databind-2.9.10.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/avro-1.7.7.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-cli-1.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/netty-all-4.1.48.Final.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/dnsjava-2.1.7.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jetty-security-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-codec-1.11.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/log4j-1.2.17.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jackson-annotations-2.9.10.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jetty-util-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/nimbus-jose-jwt-7.9.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-beanutils-1.9.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-net-3.6.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/audience-annotations-0.5.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jetty-http-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/json-simple-1.1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/checker-qual-2.5.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/paranamer-2.3.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/curator-framework-2.13.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/netty-3.10.6.Final.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-lang3-3.7.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/hadoop-annotations-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/htrace-core4-4.1.0-incubating.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerb-admin-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jackson-xc-1.9.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jsch-0.1.55.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/json-smart-2.3.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerb-server-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/accessors-smart-1.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jersey-servlet-1.19.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jetty-xml-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jsr305-3.0.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-compress-1.19.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/curator-recipes-2.13.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jettison-1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/error_prone_annotations-2.2.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jetty-webapp-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jetty-util-ajax-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerby-pkix-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/gson-2.2.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/okio-1.6.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/httpcore-4.4.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/j2objc-annotations-1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jersey-server-1.19.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jackson-jaxrs-1.9.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jaxb-impl-2.2.3-1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerb-simplekdc-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/failureaccess-1.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/zookeeper-3.4.13.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jetty-server-9.4.20.v20190813.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/re2j-1.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/kerby-xdr-1.0.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/lib/animal-sniffer-annotations-1.17.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/hadoop-hdfs-httpfs-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.2-tests.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.2-tests.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/hadoop-hdfs-nfs-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/hadoop-hdfs-client-3.2.2-tests.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/hadoop-hdfs-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/hadoop-hdfs-client-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/hadoop-hdfs-3.2.2-tests.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/lib/junit-4.11.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.2-tests.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/hadoop-mapreduce-client-nativetask-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/hadoop-mapreduce-client-uploader-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/hadoop-mapreduce-client-app-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/bcprov-jdk15on-1.60.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/json-io-2.5.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/aopalliance-1.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/jackson-jaxrs-base-2.9.10.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/guice-servlet-4.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/ehcache-3.3.1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/javax.inject-1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/jersey-client-1.19.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/jackson-module-jaxb-annotations-2.9.10.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/fst-2.50.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/guice-4.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/metrics-core-3.2.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/objenesis-1.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/java-util-1.9.0.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/bcpkix-jdk15on-1.60.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/swagger-annotations-1.5.4.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/snakeyaml-1.16.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/jackson-jaxrs-json-provider-2.9.10.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/jersey-guice-1.19.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/lib/HikariCP-java7-2.4.12.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-submarine-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-registry-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-api-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-server-common-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-client-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-common-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-server-router-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-services-core-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-server-tests-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.2.2.jar:/home/sarvesh/Downloads/hadoop-3.2.2//share/hadoop/yarn/hadoop-yarn-services-api-3.2.2.jar
+STARTUP_MSG:   build = Unknown -r 7a3bc90b05f257c8ace2f76d74264906f0f7a932; compiled by 'hexiaoqiao' on 2021-01-03T09:26Z
+STARTUP_MSG:   java = 1.8.0_292
+************************************************************/
+2021-05-13 11:55:35,123 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2021-05-13 11:55:35,485 INFO namenode.NameNode: createNameNode [-format]
+Formatting using clusterid: CID-483ff02a-8d01-4518-ba8e-84bf66873190
+2021-05-13 11:55:36,678 INFO namenode.FSEditLog: Edit logging is async:true
+2021-05-13 11:55:36,829 INFO namenode.FSNamesystem: KeyProvider: null
+2021-05-13 11:55:36,832 INFO namenode.FSNamesystem: fsLock is fair: true
+2021-05-13 11:55:36,833 INFO namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2021-05-13 11:55:36,848 INFO namenode.FSNamesystem: fsOwner             = sarvesh (auth:SIMPLE)
+2021-05-13 11:55:36,849 INFO namenode.FSNamesystem: supergroup          = supergroup
+2021-05-13 11:55:36,849 INFO namenode.FSNamesystem: isPermissionEnabled = true
+2021-05-13 11:55:36,850 INFO namenode.FSNamesystem: HA Enabled: false
+2021-05-13 11:55:36,969 INFO common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2021-05-13 11:55:36,989 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2021-05-13 11:55:36,990 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+2021-05-13 11:55:37,006 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2021-05-13 11:55:37,014 INFO blockmanagement.BlockManager: The block deletion will start around 2021 May 13 11:55:37
+2021-05-13 11:55:37,018 INFO util.GSet: Computing capacity for map BlocksMap
+2021-05-13 11:55:37,019 INFO util.GSet: VM type       = 64-bit
+2021-05-13 11:55:37,023 INFO util.GSet: 2.0% max memory 2.4 GB = 48.8 MB
+2021-05-13 11:55:37,023 INFO util.GSet: capacity      = 2^23 = 8388608 entries
+2021-05-13 11:55:37,069 INFO blockmanagement.BlockManager: Storage policy satisfier is disabled
+2021-05-13 11:55:37,069 INFO blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2021-05-13 11:55:37,089 INFO Configuration.deprecation: No unit for dfs.namenode.safemode.extension(30000) assuming MILLISECONDS
+2021-05-13 11:55:37,089 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2021-05-13 11:55:37,089 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2021-05-13 11:55:37,089 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+2021-05-13 11:55:37,090 INFO blockmanagement.BlockManager: defaultReplication         = 1
+2021-05-13 11:55:37,090 INFO blockmanagement.BlockManager: maxReplication             = 512
+2021-05-13 11:55:37,091 INFO blockmanagement.BlockManager: minReplication             = 1
+2021-05-13 11:55:37,091 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+2021-05-13 11:55:37,091 INFO blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2021-05-13 11:55:37,091 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+2021-05-13 11:55:37,091 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2021-05-13 11:55:37,165 INFO namenode.FSDirectory: GLOBAL serial map: bits=29 maxEntries=536870911
+2021-05-13 11:55:37,165 INFO namenode.FSDirectory: USER serial map: bits=24 maxEntries=16777215
+2021-05-13 11:55:37,165 INFO namenode.FSDirectory: GROUP serial map: bits=24 maxEntries=16777215
+2021-05-13 11:55:37,165 INFO namenode.FSDirectory: XATTR serial map: bits=24 maxEntries=16777215
+2021-05-13 11:55:37,207 INFO util.GSet: Computing capacity for map INodeMap
+2021-05-13 11:55:37,207 INFO util.GSet: VM type       = 64-bit
+2021-05-13 11:55:37,209 INFO util.GSet: 1.0% max memory 2.4 GB = 24.4 MB
+2021-05-13 11:55:37,209 INFO util.GSet: capacity      = 2^22 = 4194304 entries
+2021-05-13 11:55:37,211 INFO namenode.FSDirectory: ACLs enabled? false
+2021-05-13 11:55:37,211 INFO namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2021-05-13 11:55:37,212 INFO namenode.FSDirectory: XAttrs enabled? true
+2021-05-13 11:55:37,212 INFO namenode.NameNode: Caching file names occurring more than 10 times
+2021-05-13 11:55:37,324 INFO snapshot.SnapshotManager: Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2021-05-13 11:55:37,336 INFO snapshot.SnapshotManager: SkipList is disabled
+2021-05-13 11:55:37,353 INFO util.GSet: Computing capacity for map cachedBlocks
+2021-05-13 11:55:37,353 INFO util.GSet: VM type       = 64-bit
+2021-05-13 11:55:37,353 INFO util.GSet: 0.25% max memory 2.4 GB = 6.1 MB
+2021-05-13 11:55:37,353 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+2021-05-13 11:55:37,376 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2021-05-13 11:55:37,376 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2021-05-13 11:55:37,376 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2021-05-13 11:55:37,385 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+2021-05-13 11:55:37,385 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2021-05-13 11:55:37,389 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+2021-05-13 11:55:37,389 INFO util.GSet: VM type       = 64-bit
+2021-05-13 11:55:37,389 INFO util.GSet: 0.029999999329447746% max memory 2.4 GB = 749.9 KB
+2021-05-13 11:55:37,389 INFO util.GSet: capacity      = 2^17 = 131072 entries
+2021-05-13 11:55:37,474 INFO namenode.FSImage: Allocated new BlockPoolId: BP-294050762-127.0.1.1-1620887137441
+2021-05-13 11:55:37,520 INFO common.Storage: Storage directory /tmp/hadoop-sarvesh/dfs/name has been successfully formatted.
+2021-05-13 11:55:37,648 INFO namenode.FSImageFormatProtobuf: Saving image file /tmp/hadoop-sarvesh/dfs/name/current/fsimage.ckpt_0000000000000000000 using no compression
+2021-05-13 11:55:38,006 INFO namenode.FSImageFormatProtobuf: Image file /tmp/hadoop-sarvesh/dfs/name/current/fsimage.ckpt_0000000000000000000 of size 402 bytes saved in 0 seconds .
+2021-05-13 11:55:38,038 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+2021-05-13 11:55:38,057 INFO namenode.FSImage: FSImageSaver clean checkpoint: txid=0 when meet shutdown.
+2021-05-13 11:55:38,058 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at sarvesh-VirtualBox/127.0.1.1
+************************************************************/
+sarvesh@sarvesh-VirtualBox:~$ stop-all.sh
+WARNING: Stopping all Apache Hadoop daemons as sarvesh in 10 seconds.
+WARNING: Use CTRL-C to abort.
+Stopping namenodes on [localhost]
+Stopping datanodes
+Stopping secondary namenodes [sarvesh-VirtualBox]
+Stopping nodemanagers
+Stopping resourcemanager
+sarvesh@sarvesh-VirtualBox:~$ start-all.sh
+WARNING: Attempting to start all Apache Hadoop daemons as sarvesh in 10 seconds.
+WARNING: This is not a recommended production deployment configuration.
+WARNING: Use CTRL-C to abort.
+Starting namenodes on [localhost]
+Starting datanodes
+Starting secondary namenodes [sarvesh-VirtualBox]
+Starting resourcemanager
+Starting nodemanagers
+sarvesh@sarvesh-VirtualBox:~$ hdfs dfs -mkdir /lab5
+sarvesh@sarvesh-VirtualBox:~$ hdfs dfs -copyFromLocal /home/sarvesh/Downloads/Dataset /lab5
+sarvesh@sarvesh-VirtualBox:~$ hdfs dfs -ls /lab5
+Found 1 items
+-rw-r--r--   1 sarvesh supergroup     888190 2021-05-13 12:01 /lab5/Dataset
+sarvesh@sarvesh-VirtualBox:~$ hadoop jar  /home/sarvesh/Desktop/temparature.jar  /lab5/Dataset /lab5_output
+2021-05-13 12:02:57,997 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+2021-05-13 12:02:59,256 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+2021-05-13 12:02:59,347 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/sarvesh/.staging/job_1620887241635_0001
+2021-05-13 12:02:59,983 INFO input.FileInputFormat: Total input files to process : 1
+2021-05-13 12:03:00,744 INFO mapreduce.JobSubmitter: number of splits:1
+2021-05-13 12:03:01,558 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1620887241635_0001
+2021-05-13 12:03:01,560 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2021-05-13 12:03:02,088 INFO conf.Configuration: resource-types.xml not found
+2021-05-13 12:03:02,089 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2021-05-13 12:03:02,696 INFO impl.YarnClientImpl: Submitted application application_1620887241635_0001
+2021-05-13 12:03:02,926 INFO mapreduce.Job: The url to track the job: http://sarvesh-VirtualBox:8088/proxy/application_1620887241635_0001/
+2021-05-13 12:03:02,948 INFO mapreduce.Job: Running job: job_1620887241635_0001
+2021-05-13 12:03:27,974 INFO mapreduce.Job: Job job_1620887241635_0001 running in uber mode : false
+2021-05-13 12:03:27,976 INFO mapreduce.Job:  map 0% reduce 0%
+2021-05-13 12:03:39,345 INFO mapreduce.Job:  map 100% reduce 0%
+2021-05-13 12:03:48,460 INFO mapreduce.Job:  map 100% reduce 100%
+2021-05-13 12:03:48,473 INFO mapreduce.Job: Job job_1620887241635_0001 completed successfully
+2021-05-13 12:03:48,672 INFO mapreduce.Job: Counters: 54
+	File System Counters
+		FILE: Number of bytes read=72210
+		FILE: Number of bytes written=613881
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=888289
+		HDFS: Number of bytes written=8
+		HDFS: Number of read operations=8
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+		HDFS: Number of bytes read erasure-coded=0
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=8757
+		Total time spent by all reduces in occupied slots (ms)=6233
+		Total time spent by all map tasks (ms)=8757
+		Total time spent by all reduce tasks (ms)=6233
+		Total vcore-milliseconds taken by all map tasks=8757
+		Total vcore-milliseconds taken by all reduce tasks=6233
+		Total megabyte-milliseconds taken by all map tasks=8967168
+		Total megabyte-milliseconds taken by all reduce tasks=6382592
+	Map-Reduce Framework
+		Map input records=6565
+		Map output records=6564
+		Map output bytes=59076
+		Map output materialized bytes=72210
+		Input split bytes=99
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=1
+		Reduce shuffle bytes=72210
+		Reduce input records=6564
+		Reduce output records=1
+		Spilled Records=13128
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=612
+		CPU time spent (ms)=4520
+		Physical memory (bytes) snapshot=444710912
+		Virtual memory (bytes) snapshot=5060186112
+		Total committed heap usage (bytes)=444071936
+		Peak Map Physical memory (bytes)=242741248
+		Peak Map Virtual memory (bytes)=2526793728
+		Peak Reduce Physical memory (bytes)=201969664
+		Peak Reduce Virtual memory (bytes)=2533392384
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=888190
+	File Output Format Counters 
+		Bytes Written=8
+sarvesh@sarvesh-VirtualBox:~$ hdfs dfs -ls /lab5_output
+Found 2 items
+-rw-r--r--   1 sarvesh supergroup          0 2021-05-13 12:03 /lab5_output/_SUCCESS
+-rw-r--r--   1 sarvesh supergroup          8 2021-05-13 12:03 /lab5_output/part-r-00000
+sarvesh@sarvesh-VirtualBox:~$ hdfs dfs -cat /lab5_output/part-r-00000
+1901	46
+
