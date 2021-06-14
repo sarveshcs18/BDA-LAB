@@ -1,0 +1,25 @@
+Program to run wordcount on scala shell
+Note- Create a textfile word.txt locally and give appropriate path while loading the data using sc.textFile
+
+val data=sc.textFile("word.txt")  
+
+
+data.collect;  
+
+
+val splitdata = data.flatMap(line => line.split(" "));  
+
+
+splitdata.collect;  
+
+
+val mapdata = splitdata.map(word => (word,1));  
+
+
+mapdata.collect;  
+
+
+val reducedata = mapdata.reduceByKey(_+_);  
+
+
+reducedata.collect;
